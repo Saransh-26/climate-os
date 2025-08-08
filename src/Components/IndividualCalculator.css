@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+
+/* General container styles */
+
+.calculator-container {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  flex: 1;
+  font-weight: 500;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.result {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #007b00;
+}
+ 
+.carbon-calculator-container {
+    padding: 25px;
+    max-width: 800px; /* Slightly wider for more content */
+    margin: 30px auto; /* More margin top/bottom */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    line-height: 1.7;
+    position: relative;
+    background: linear-gradient(135deg, #f0f4f8, #e0e7ee); /* Subtle gradient background */
+    border-radius: 15px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    overflow: hidden; /* For any internal overflows */
+}
+
+/* Headings */
+.carbon-calculator-container h2 {
+    color: #4b995d; /* Primary blue for main heading */
+    text-align: center;
+    margin-bottom: 35px;
+    font-family: 'Poppins', sans-serif; /* Different font for headings */
+    font-weight: 700;
+    font-size: 2.2em;
+    letter-spacing: -0.5px;
+}
+
+.carbon-calculator-container p {
+    text-align: center;
+    font-size: 1.05em;
+    color: #5a6a7c;
+    margin-bottom: 25px;
+}
+
+/* Section specific styles */
+.calculator-section {
+    border: none; /* Remove border, rely on shadow/background */
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator-section:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.calculator-section h3 {
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.6em;
+    color: #333; /* Darker default color */
+}
+
+/* Section specific heading colors - More vibrant */
+.electricity-section h3 {
+    color: #1e7e34; /* Bright Blue */
+}
+
+.transportation-section h3 {
+    color: #1e7e34; /* Amber */
+}
+
+.waste-section h3 {
+    color: #1e7e34; /* Red */
+}
+
+.waste-management-info {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 20px;
+    text-align: left;
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.waste-feedback {
+    padding: 15px;
+    background-color: #d4edda;
+    border-radius: 8px;
+    border: 1px solid #28a745;
+    margin-top: 20px;
+}
+
+.waste-feedback p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #155724;
+    text-align: left;
+    line-height: 1.5;
+}
+
+
+/* Form elements */
+.form-group {
+    margin-bottom: 20px;
+    position: relative; /* For tooltips */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #343a40;
+    font-size: 1.05em;
+}
+
+.form-group input[type="number"],
+.form-group select {
+    width: calc(100% - 24px); /* Account for padding and border */
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1em;
+    color: #495057;
+}
+
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+    border-color: #007bff; /* Primary blue focus */
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25); /* Focus ring */
+    outline: none;
+}
+
+/* Radio buttons */
+.radio-group label {
+    margin-right: 25px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal; /* Override bold */
+    color: #495057;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+    transform: scale(1.1); /* Slightly larger radio buttons */
+}
+
+/* Small text/hints */
+.small-text {
+    font-size: 0.85em;
+    color: #6c757d;
+    margin-left: 10px;
+}
+
+.hint-text {
+    font-size: 0.8em;
+    color: #868e96;
+    margin-top: 8px;
+    text-align: left;
+    font-style: italic;
+    border-left: 3px solid #dee2e6;
+    padding-left: 10px;
+}
+
+/* Subheadings for transportation */
+.transportation-section h4 {
+    color: #495057;
+    border-bottom: 1px dashed #e9ecef;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Button styles */
+.calculate-button {
+    display: block;
+    width: 100%;
+    padding: 18px 25px;
+    font-size: 20px;
+    background: linear-gradient(45deg, #28a745, #218838); /* Green gradient */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(40, 167, 69, 0.3); /* Green shadow */
+    position: relative;
+    overflow: hidden; /* For ripple effect */
+}
+
+.calculate-button:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34); /* Darker green gradient */
+    transform: translateY(-3px); /* More pronounced lift */
+    box-shadow: 0 12px 20px rgba(40, 167, 69, 0.4);
+}
+
+.calculate-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2);
+}
+
+/* Ripple effect for button */
+.calculate-button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1) translate(-50%, -50%);
+    transition: width 0.3s ease-out, height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.calculate-button:active:after {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+    transition: 0s;
+}
+
+/* Result display */
+.result-container {
+    margin-top: 40px;
+    padding: 30px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e6ffee, #d4edda); /* Light green gradient */
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    animation: fadeInScale 0.5s ease-out forwards; /* Animation for appearance */
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.result-container h3 {
+    margin-top: 0;
+    color: #1e7e34; /* Darker green */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.result-value {
+    font-size: 3.5em; /* Larger value */
+    font-weight: bold;
+    color: #28a745;
+    margin: 15px 0 20px;
+    font-family: 'Poppins', sans-serif;
+    animation: pulse 1.5s infinite; /* Gentle pulse animation */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+
+.result-description {
+    font-size: 1em;
+    color: #495057;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.view-details-button, .share-button {
+    margin-top: 25px;
+    padding: 12px 20px;
+    background-color: #1e7e34;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.05em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+    margin-left: 10px; /* Space between buttons */
+    margin-right: 10px;
+}
+
+.view-details-button:hover, .share-button:hover {
+    background-color: #1e7e34;
+    transform: translateY(-2px);
+}
+
+.view-details-button:active, .share-button:active {
+    transform: translateY(0);
+}
+
+
+/* Pop-up Overlay and Content (3D effect) */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.popup-content {
+    background: linear-gradient(160deg, #ffffff, #f0f4f8); /* Gradient for pop-up */
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    width: 90%;
+    max-width: 600px; /* Slightly wider pop-up */
+    position: relative;
+    transform: scale(0.9);
+    animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #e0e7ee; /* Subtle border */
+}
+
+.popup-content h3 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 15px;
+}
+
+.close-popup-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2.5em; /* Larger close button */
+    color: #999;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.close-popup-button:hover {
+    color: #333;
+    transform: rotate(90deg); /* Spin on hover */
+}
+
+.breakdown-details {
+    background-color: #eaf7f9; /* Lighter blue/green */
+    border: 1px solid #cce7eb;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.breakdown-details p {
+    margin: 10px 0;
+    font-size: 1.15em;
+    color: #34495e; /* Darker text */
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eff3f7; /* Dashed line for separation */
+}
+
+.breakdown-details p:last-child {
+    border-bottom: none;
+}
+
+.breakdown-details p strong {
+    color: #007bff; /* Primary blue for values */
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+.chart-container {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f7fcff; /* Very light blue */
+    border-radius: 10px;
+    border: 1px solid #d0e4f0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.chart-container h4 {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.no-data-message {
+    color: #868e96;
+    font-style: italic;
+    margin-top: 25px;
+    text-align: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px dashed #dee2e6;
+}
+
+.impact-message {
+    margin-top: 30px;
+    font-size: 1em;
+    color: #5a6a7c;
+    line-height: 1.6;
+    text-align: center;
+    border-top: 1px solid #e9ecef; /* Solid line for clear separation */
+    padding-top: 20px;
+}
+
+/* Tooltip styles */
+.tooltip-container {
+    position: absolute;
+    top: 50%;
+    right: 0px; /* Position next to input/label */
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #e0f2ff;
+    border: 1px solid #a8dcfc;
+    z-index: 5;
+    transition: all 0.2s ease;
+}
+
+.tooltip-container:hover {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3);
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 220px;
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the tooltip container */
+    left: 50%;
+    margin-left: -110px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.85em;
+    line-height: 1.4;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Arrow for tooltip */
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #343a40 transparent transparent transparent;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carbon-calculator-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .carbon-calculator-container h2 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    .calculator-section {
+        padding: 20px;
+    }
+    .popup-content {
+        padding: 25px;
+    }
+    .popup-content h3 {
+        font-size: 1.6em;
+    }
+    .close-popup-button {
+        font-size: 2em;
+    }
+    .result-value {
+        font-size: 2.8em;
+    }
+    .view-details-button, .share-button {
+        display: block;
+        width: calc(100% - 20px);
+        margin: 15px auto 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .carbon-calculator-container h2 {
+        font-size: 1.6em;
+    }
+    .form-group input[type="number"],
+    .form-group select {
+        width: calc(100% - 20px); /* Adjust for smaller screens */
+    }
+    .radio-group label {
+        margin-right: 15px;
+    }
+    .popup-content {
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .breakdown-details p {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .breakdown-details p strong {
+        margin-left: 0;
+        margin-top:5px;
+    }
+}

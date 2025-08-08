@@ -1,0 +1,57 @@
+/* ==== REMOVE or REPLACE your old .promo-video-section styles with these ==== */
+
+.promo-slider-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.slider-container {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden; /* This is crucial for the sliding effect */
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper {
+    display: flex;
+    width: 200%; /* Contains two videos, so 100% * 2 */
+    transition: transform 0.5s ease-in-out;
+}
+
+.video-wrapper video {
+    width: 50%; /* Each video takes up half of the wrapper's width */
+    display: block;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.slider-nav:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.slider-nav.prev {
+    left: 15px;
+}
+
+.slider-nav.next {
+    right:15px;
+}
